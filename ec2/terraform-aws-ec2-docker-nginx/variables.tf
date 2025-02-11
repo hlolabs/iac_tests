@@ -13,7 +13,13 @@ variable "instance_type" {
 variable "key_name" {
   description = "Name of the SSH key pair"
   type        = string
-  default     = ""
+  default     = "my-key-pair"
+}
+
+variable "public_key_path" {
+  description = "Path to the public key to be used for SSH access"
+  type        = string
+  default     = "~/.ssh/id_rsa.pub"
 }
 
 variable "ami" {
